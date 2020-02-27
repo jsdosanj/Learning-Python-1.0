@@ -1,0 +1,403 @@
+print("")
+
+# Arithmetic Operators:
+#----------------------
+# <
+# <=
+# >
+# >=
+# ==
+# !=
+
+"""
+x = 10
+if x == 10:
+ print("x = " + str(x))
+
+if x != 1000:
+ print("x != 1000")
+
+if x <= 10:
+ print("x <= 10")
+else:
+ print("x > 10")
+
+if x < 10:
+ print("x < 10")
+elif x > 10:
+ print("x > 10")
+else:
+ print("x = 10")
+"""
+
+# x = 10
+# print("x < 10") if x < 10 else print("x >= 10")
+# print("x < 10") if x < 10 else print("x > 10") if x > 10 else print("x = 10")
+
+'''
+x = "Test"
+if x == "Test":
+ print("x = \a\"Test\"")
+else:
+ print("x != \"Test\"")
+'''
+
+"""
+x = 1
+y = 2
+if x == 1 and y == 2:
+ print("x = 1 and y = 2")
+
+if x == 1 or y == 3:
+ print("x = 1 or y = 3")
+"""
+
+"""
+x = 10
+y = -2
+
+if x == 1:
+ print("x = 1")
+ if y < 0:
+  print("y is a negative numebr.")
+ else:
+  print("y is a positive numebr.")
+else:
+ print("x != 1")
+"""
+
+"""
+x = 1
+
+if x == 1:
+ pass
+
+print("after pass")
+"""
+
+SearchFor = 100
+List1 = [10, 20, 30]
+
+if SearchFor in List1:
+ print(str(SearchFor) + " is in " + str(List1))
+else:
+ print(str(SearchFor) + " is not in " + str(List1))
+
+print("")
+
+#!/bin/bash
+
+a=1 # Global Variable
+
+function f1()
+{
+ # local a=1
+ a=1000  # Overwriting the value of a (global variable)
+ echo $a
+}
+
+function f2()
+{
+ echo $a
+}
+
+f1
+f1
+print("")
+
+"""
+List1 = ["Item1", "Item22", "Item33", "AA", "BB"]
+
+for i in List1:
+ print(str(i) + "\t-\t" + str(len(i)))
+print("")
+
+for i in List1[0:2]:  # List1[0] and List1[1]
+ print(str(i) + "\t-\t" + str(len(i)))
+"""
+
+# for i in range(0, 3):   # 0 through 2
+# print(i)
+
+# for i in range(0, 3, 1):
+# print(i)
+
+# for i in range(2, 4):
+# print(i)
+
+# for i in range(1, 10, 2):
+# print(i)
+
+# i = 1
+# while i <= 10:
+#  print(i)
+#  i = i + 1
+
+
+# i = 1
+# while i <= 10:
+#  if i == 5:
+#   break
+#  print(i)
+#  i = i + 1
+
+
+"""
+i = 1
+while i <= 10:
+ if i == 5:
+  i = i + 1
+  continue
+ print(i)
+ i = i + 1
+print("")
+
+i = 0
+while i < 10:
+ i = i + 1
+ if i == 5:
+  continue
+ print(i)
+"""
+List1 = [2, 4, 6]
+
+for i in range(1, 21):
+ if i in List1:
+  continue
+ print(str(i) + " is not in " + str(List1))
+print("")
+print("")
+
+def f1():
+ print("This is f1() function")
+
+# f1()
+# f1()
+
+def f1():
+ print("This is an updated f1() function")
+
+# f1()
+
+def f2(x):
+ Result = (x * 2) + 10
+ return Result
+
+# x      = 10
+# Result = 0
+# Result = f2(x)
+# print("Result = " + str(Result))
+
+# print(f2(10))
+
+# Result = 0
+# List1 = []
+# for i in range(1, 11):
+#  Result = f2(i)
+ # print(str(i) + " - " + str(Result))
+#  List1.append(Result)
+
+# print(List1)
+
+def f3(x = 10):
+ Result = (x * 2) + 7
+ return Result
+
+x      = 1
+Result = 0
+Result = f3(x)
+print(Result)
+
+Result = 0
+Result = f3()
+print(Result)
+print("")
+print("")
+
+"""
+a = 1 # Global Variable
+
+def f1():
+ print(a)
+
+def f2():
+ print(a)
+
+f1()
+f2()
+"""
+
+"""
+a = 1 # Global Variable
+
+def f1():
+ a = 1000  # Local variable
+ print(a)
+
+def f2():
+ print(a)
+
+f1()
+f2()
+"""
+
+"""
+def f3(x = 1, y = 2, z = "Test"):
+ print("x = " + str(x)) 
+ print("y = " + str(y))
+ print("z = " + str(z))
+ 
+
+# f3(10, 20, "NewTest")
+# f3(x = 10, y = 20, z = "NewTest")
+# f3(y = 222, x = 111, z = "NewTest")
+# f3(y = 222, x = 111)
+# f3(x = 111)
+f3()
+"""
+
+"""
+def f4(*args):
+ Sum = 0
+ for arg in args:
+  #print(arg)
+  Sum = Sum + arg
+ print("args has " + str(len(args)) + " arguments.")
+ return Sum
+ 
+
+
+Sum = 0
+Sum = f4(1);             print(str(Sum) + "\n")
+Sum = f4(1, 2, 3);       print(str(Sum) + "\n")
+Sum = f4(1, 2, 3, 4, 5); print(str(Sum) + "\n")
+"""
+
+
+
+
+def f5(x, y, z):
+ print("x = " + str(x))
+ print("y = " + str(y))
+ print("z = " + str(z))
+
+f5(100, 200, 300)
+print("")
+
+List1 = [100, 200, 300]
+f5(*List1)
+print("")
+
+
+f5(List1[0], List1[1], List1[2])
+print("")
+print("\n### Sets ###\n")
+
+# A set is an unordered and unindexed collection of items
+# Sets don't allow duplicate values.
+
+Set1 = {"Item1", "Item2", "Item3", "Item1"}
+
+print(Set1)
+print("Item1" in Set1)
+
+if "Item1" in Set1:
+ print("Exists")
+
+if "Item11" not in Set1:
+ print("Doesn't Exist.")
+
+for item in Set1:
+ print(item)
+print("")
+
+import Module1
+# import Module1 as Utilities
+import random
+
+# Module1.f1()
+# Module1.f2()
+
+# Utilities.f1()  # if you use import Module1 as Utilities
+# Utilities.f2()  # if you use import Module1 as Utilities
+
+# Number = random.randrange(1, 10) # This will generate a random number form 1 to 9
+# print("Your random number is: " + str(Number))
+
+
+for i in range(1, 11):
+ Number = random.randrange(1, 1001)
+ print("Attempt number " + str(i) + ": your random number is: " + str(Number))
+ def f1():
+ print("This is f1")
+
+def f2():
+ print("This is f2")
+
+ FileName     = "./Files/File1.txt"
+Contents_str = ""
+
+
+# FileWrite = open(FileName, "a") # a -> append
+FileWrite = open(FileName, "w") # w -> write
+FileWrite.write("Line1\n")
+FileWrite.write("\n")
+FileWrite.write("\n")
+FileWrite.write("Line2\n")
+FileWrite.write("\n")
+FileWrite.write("\n")
+FileWrite.close()
+
+
+FileRead = open(FileName, "r")  # r -> read
+Contents_str = FileRead.read()
+FileRead.close()
+
+print(Contents_str)
+print("There are " + str(len(Contents_str)) + " characters in " + FileName + ".")
+
+
+Lines = Contents_str.split("\n")
+for Line in Lines:
+ if len(Line) > 0:
+  print(Line)
+
+print("\n###############\n")
+
+FileRead = open("./Files/File1.txt", "r")
+Line = FileRead.readline();
+Line = Line[0:len(Line) - 1] # Get rid of "\n"
+print(Line)
+
+Line = FileRead.readline();
+Line = Line[0:len(Line) - 1] # Get rid of "\n"
+print(Line)
+
+FileRead.close()
+
+print("\n###############\n")
+
+FileRead = open(FileName, "r")
+
+Line = FileRead.readline()
+while(Line):
+ if len(Line) > 1:             # If the file is not empty ("\n")
+  Line = Line[0:len(Line) - 1] # Get rid of the trailing "\n"
+  print(Line)
+ Line = FileRead.readline()
+
+FileRead.close()
+
+print("\n###############\n")
+
+FileRead = open(FileName, "r")
+Lines = FileRead.readlines()
+for Line in Lines:
+ if len(Line) > 1:
+  Line = Line[0:len(Line) - 1]
+  print(Line)
+
+FileRead.close()
+
+
+print("Therer are " + str(len(Lines)) + " lines in " + FileName + ".")
